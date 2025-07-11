@@ -1,3 +1,48 @@
-aaaaaaaa
-bbbbbbb
-cccc
+ターミナル（Mac）またはGit Bash（Windows）を開く
+先ほど作った「rakus(training01)」フォルダに移動します。
+git init
+これで、そのフォルダがGitで管理できるようになります。
+
+リモートリポジトリを登録（繋げる）
+git remote add origin https://github.com/あなたのユーザ名/rakus.git
+
+
+流れ⓵アッド　⓶コミット
+git add ファイル名
+git commit -m "index.htmlを追加しました"
+
+⓷プル　（コンフリクト用・GitHub上の同名ファイルを取得）
+git pull https://github.com/ito2283/training01.git
+（内容が違っていたら判断し、新ファイルで⓵⓶を繰り返す）
+
+⓸　プッシュ
+git push origin master
+
+
+ステージングにあるか確認
+git status
+
+履歴を確認
+git log
+
+ステージングからワーキング(作業)エリアに戻す
+git restore --staged <ファイル名>
+
+最新のコミットの状態に戻す
+git restore <ファイル名>
+
+最後のコミット時点の状態に戻す
+git reset --hard HEAD ＜logで表示されるcommit右の値＞
+
+
+
+git remote add origin https://github.com/ito2283/training01.git
+
+git restore --staged <ファイル名>
+gh.txt
+git clone https://github.com/ito2283/training01.git
+git pull origin master
+
+全てをステージングに上げる
+git add .
+
